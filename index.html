@@ -1,38 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>My Family Tree</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Family ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#667eea,#764ba2);
+padding:30px;
+}
+
+h1{
+text-align:center;
+color:white;
+font-size:42px;
+margin-bottom:40px;
+text-shadow:0 5px 10px rgba(0,0,0,.3);
+}
+
+.container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+max-width:1200px;
+margin:auto;
+}
+
+.card{
+background:rgba(255,255,255,.18);
+backdrop-filter:blur(14px);
+border-radius:25px;
+padding:25px;
+text-align:center;
+color:white;
+box-shadow:0 15px 30px rgba(0,0,0,.25);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.03);
+}
+
+.card img{
+width:180px;
+height:180px;
+border-radius:50%;
+object-fit:cover;
+border:6px solid white;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+margin-bottom:20px;
+}
+
+.card h2{
+margin-bottom:8px;
+}
+
+.role{
+color:#ffe082;
+font-weight:bold;
+margin-bottom:12px;
+}
+</style>
 </head>
+
 <body>
 
-<h1>🌳 My Family Tree 🌳</h1>
-<h2>Created by Tanvi Udaywal</h2>
-<hr>
+<h1>❤️ My Family ❤️</h1>
 
-<h2>👨 Father</h2>
-<img src="father.jpg" width="150" height="150">
-<h3>Sunil Udaywal</h3>
-<p>My father is the pillar of our family. He is hardworking, caring and always motivates us.</p>
+<div class="container">
+  <div class="card">
+<img src="father.jpg">
+<h2>Sunil Udaywal</h2>
+<div class="role">Father 👨</div>
+<p>The pillar of our family. Hardworking, responsible and always supportive.</p>
+</div>
 
-<hr>
+<div class="card">
+<img src="mother.jpg">
+<h2>Anita Udaywal</h2>
+<div class="role">Mother 👩</div>
+<p>The heart of our home. Caring, loving and always brings happiness.</p>
+</div>
 
-<h2>👩 Mother</h2>
-<img src="mother.jpg" width="150" height="150">
-<h3>Anita Udaywal</h3>
-<p>My mother is the heart of our family. She is loving, kind and always takes care of everyone.</p>
+<div class="card">
+<img src="tanvi.jpg">
+<h2>Tanvi Udaywal</h2>
+<div class="role">Daughter 👧</div>
+<p>A bright student with big dreams, confidence and kindness.</p>
+</div>
 
-<hr>
+<div class="card">
+<img src="brother.jpg">
+<h2>Ritik Udaywal</h2>
+<div class="role">Brother 👦</div>
+<p>Cheerful, intelligent and the source of joy in our family.</p>
+</div>
 
-<h2>👦 Brother</h2>
-<img src="brother.jpg" width="150" height="150">
-<h3>Ritik Udaywal</h3>
-<p>My brother is cheerful and caring. He always fills our home with happiness.</p>
+</div>
 
-<hr>
-
-<h2>👧 About Me</h2>
-<img src="tanvi.jpg" width="150" height="150">
-<h3>Tanvi Udaywal</h3>
-<p>I love my family very much. I am proud to be a member of this wonderful family.</p>
 </body>
 </html>
