@@ -3,117 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Family</title>
+<title>My Family Tree</title>
 
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
-body{
-background:#f8f2e8;
-padding:30px;
-}
-
-h1{
-text-align:center;
-font-size:55px;
-color:#2f4f2f;
-margin-bottom:40px;
-}
-
-.tree{
-display:flex;
-flex-direction:column;
-align-items:center;
-max-width:1000px;
-margin:auto;
-}
-
-.row{
-display:flex;
-justify-content:center;
-gap:120px;
-flex-wrap:wrap;
-}
-
-.card{
-width:220px;
-text-align:center;
-}
-
-.card img{
-width:170px;
-height:170px;
-border-radius:50%;
-object-fit:cover;
-border:5px solid #3f7d20;
-box-shadow:0 8px 18px rgba(0,0,0,.2);
-}
-
-.card h2{
-margin-top:15px;
-font-size:28px;
-color:#222;
-}
-
-.card p{
-font-size:18px;
-margin-top:6px;
-}
-
-.vline{
-width:4px;
-height:70px;
-background:#3f7d20;
-}
-
-.hline{
-width:420px;
-height:4px;
-background:#3f7d20;
-}
-
-.split{
-width:420px;
-display:flex;
-justify-content:space-between;
-}
-
-.split div{
-width:4px;
-height:70px;
-background:#3f7d20;
-}
-
-@media(max-width:700px){
-
-.row{
-gap:40px;
-}
-
-.hline,.split{
-width:220px;
-}
-
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
-
 <body>
+
+<div class="container">
 
 <h1>🌳 MY FAMILY 🌳</h1>
 
-<div class="tree">
+<div class="parents">
 
-<div class="row">
-  <div class="card">
+<div class="card">
 <img src="father.jpg" alt="Father">
 <h2>Father</h2>
 <p>Sunil Udaywal</p>
@@ -127,17 +30,16 @@ width:220px;
 
 </div>
 
-<div class="vline"></div>
-
-<div class="hline"></div>
-
+<div class="tree-line">
+<div class="vertical"></div>
+<div class="horizontal"></div>
 <div class="split">
 <div></div>
 <div></div>
 </div>
+</div>
 
-<div class="row">
-
+<div class="children">
 <div class="card">
 <img src="tanvi.jpg" alt="Tanvi">
 <h2>Tanvi</h2>
@@ -153,5 +55,164 @@ width:220px;
 </div>
 
 </div>
+
 </body>
 </html>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f6f0e5;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:30px;
+}
+
+h1{
+text-align:center;
+font-size:52px;
+margin-bottom:50px;
+color:#2e5d34;
+}
+
+.parents,
+.children{
+display:flex;
+justify-content:center;
+gap:100px;
+flex-wrap:wrap;
+}
+
+.card{
+width:220px;
+text-align:center;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card img{
+width:180px;
+height:180px;
+object-fit:cover;
+border-radius:12px;
+border:5px solid #2e7d32;
+box-shadow:0 10px 20px rgba(0,0,0,.25);
+}
+
+.card h2{
+margin-top:12px;
+font-size:28px;
+color:#222;
+}
+
+.card p{
+font-size:18px;
+color:#555;
+margin-top:5px;
+
+}
+.tree-line{
+display:flex;
+flex-direction:column;
+align-items:center;
+margin:30px 0;
+}
+
+.vertical{
+width:4px;
+height:60px;
+background:#2e7d32;
+}
+
+.horizontal{
+width:420px;
+height:4px;
+background:#2e7d32;
+}
+
+.split{
+width:420px;
+display:flex;
+justify-content:space-between;
+}
+
+.split div{
+width:4px;
+height:60px;
+background:#2e7d32;
+}
+
+@media(max-width:768px){
+
+.parents,
+.children{
+gap:35px;
+}
+
+.horizontal,
+.split{
+width:220px;
+}
+
+.card{
+width:170px;
+}
+
+.card img{
+width:140px;
+height:140px;
+}
+
+h1{
+font-size:38px;
+
+
+
+}
+
+}
+.card{
+background:white;
+padding:20px;
+border-radius:18px;
+box-shadow:0 12px 25px rgba(0,0,0,.15);
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.05);
+box-shadow:0 18px 35px rgba(0,0,0,.25);
+}
+
+body{
+background:linear-gradient(135deg,#eef7ea,#d7efd0);
+}
+
+h1{
+text-shadow:2px 2px 8px rgba(0,0,0,.15);
+}
+
+.card img{
+transition:0.4s;
+}
+
+.card:hover img{
+transform:scale(1.05);
+}
+
+.card p{
+line-height:1.6;
+}
+
+.container{
+padding-bottom:60px;
+}
