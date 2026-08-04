@@ -3,40 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>My Family</title>
 
 <style>
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
 }
 
 body{
-background:#f6f1e7;
-padding:30px;
+background:#f4efe3;
+font-family:Georgia,serif;
 }
 
 h1{
 text-align:center;
-font-size:60px;
-margin-bottom:50px;
-font-family:Georgia,serif;
+font-size:56px;
+margin:30px 0;
+letter-spacing:2px;
 }
 
 .tree{
-max-width:1000px;
-margin:auto;
 display:flex;
 flex-direction:column;
 align-items:center;
 }
 
-.parents,
-.children{
+.row{
 display:flex;
 justify-content:center;
 gap:120px;
@@ -44,82 +38,173 @@ flex-wrap:wrap;
 }
 
 .card{
+width:220px;
 text-align:center;
-width:230px;
 }
 
 .card img{
-width:180px;
-height:180px;
+width:170px;
+height:170px;
 object-fit:cover;
-border:3px solid #333;
-box-shadow:0 10px 20px rgba(0,0,0,.2);
+border-radius:10px;
+border:4px solid #222;
 }
 
 .card h2{
-margin-top:12px;
-font-size:28px;
-}
-
-.role{
-font-size:22px;
-font-weight:bold;
+margin-top:10px;
+font-size:26px;
 }
 
 .card p{
+font-size:16px;
+margin-top:8px;
+line-height:1.5;
+}
+
+.vline{
+width:4px;
+height:70px;
+background:#222;
+}
+
+.hline{
+width:420px;
+height:4px;
+background:#222;
+}
+
+.twolines{
+width:420px;
+display:flex;
+justify-content:space-between;
+}
+
+.twolines div{
+width:4px;
+height:70px;
+background:#222;
+}
+
+@media(max-width:700px){
+.row{
+gap:40px;
+}
+.hline,.twolines{
+width:240px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<h1>MY FAMILY</h1>
+
+<div class="tree">
+
+<div class="row">
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Family</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#f4efe3;
+font-family:Georgia,serif;
+}
+
+h1{
+text-align:center;
+font-size:56px;
+margin:30px 0;
+letter-spacing:2px;
+}
+
+.tree{
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.row{
+display:flex;
+justify-content:center;
+gap:120px;
+flex-wrap:wrap;
+}
+
+.card{
+width:220px;
+text-align:center;
+}
+
+.card img{
+width:170px;
+height:170px;
+object-fit:cover;
+border-radius:10px;
+border:4px solid #222;
+}
+
+.card h2{
 margin-top:10px;
-font-size:17px;
-  <div class="card">
-<img src="father.jpg">
-<h2>Sunil Udaywal</h2>
-<div class="role">(Father)</div>
-<p>
-He is hardworking and responsible.<br>
-He always supports and motivates our family.
-</p>
-</div>
+font-size:26px;
+}
 
-<div class="card">
-<img src="mother.jpg">
-<h2>Anita Udaywal</h2>
-<div class="role">(Mother)</div>
-<p>
-She is caring and loving.<br>
-She always keeps our family happy and united.
-</p>
-</div>
+.card p{
+font-size:16px;
+margin-top:8px;
+line-height:1.5;
+}
 
-<div class="line1"></div>
-<div class="line2"></div>
+.vline{
+width:4px;
+height:70px;
+background:#222;
+}
 
-<div class="line3">
-<div></div>
-<div></div>
-</div>
+.hline{
+width:420px;
+height:4px;
+background:#222;
+}
 
-<div class="children">
-  <div class="card">
-<img src="tanvi.jpg">
-<h2>Tanvi Udaywal</h2>
-<div class="role">(Daughter)</div>
-<p>
-I am a B.Tech student.<br>
-I enjoy learning new things and working hard to achieve my goals.
-</p>
-</div>
+.twolines{
+width:420px;
+display:flex;
+justify-content:space-between;
+}
 
-<div class="card">
-<img src="brother.jpg">
-<h2>Ritik Udaywal</h2>
-<div class="role">(Brother)</div>
-<p>
-He is cheerful and intelligent.<br>
-He brings joy and happiness to our family.
-</p>
-</div>
+.twolines div{
+width:4px;
+height:70px;
+background:#222;
+}
 
-</div>
-  </div>
+@media(max-width:700px){
+.row{
+gap:40px;
+}
+.hline,.twolines{
+width:240px;
+}
+}
+</style>
+</head>
 
-</body>
-</html>
+<body>
+
+<h1>MY FAMILY</h1>
+
+<div class="tree">
+
+<div class="row">
