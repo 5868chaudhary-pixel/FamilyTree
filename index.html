@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>My Family ❤️</title>
+<title>My Family</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -15,97 +16,110 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#667eea,#764ba2);
+background:#f6f1e7;
 padding:30px;
 }
 
 h1{
 text-align:center;
-color:white;
-font-size:42px;
-margin-bottom:40px;
-text-shadow:0 5px 10px rgba(0,0,0,.3);
+font-size:60px;
+margin-bottom:50px;
+font-family:Georgia,serif;
 }
 
-.container{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-max-width:1200px;
+.tree{
+max-width:1000px;
 margin:auto;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.parents,
+.children{
+display:flex;
+justify-content:center;
+gap:120px;
+flex-wrap:wrap;
 }
 
 .card{
-background:rgba(255,255,255,.18);
-backdrop-filter:blur(14px);
-border-radius:25px;
-padding:25px;
 text-align:center;
-color:white;
-box-shadow:0 15px 30px rgba(0,0,0,.25);
-transition:.4s;
-}
-
-.card:hover{
-transform:translateY(-10px) scale(1.03);
+width:230px;
 }
 
 .card img{
 width:180px;
 height:180px;
-border-radius:50%;
 object-fit:cover;
-border:6px solid white;
-box-shadow:0 10px 25px rgba(0,0,0,.3);
-margin-bottom:20px;
+border:3px solid #333;
+box-shadow:0 10px 20px rgba(0,0,0,.2);
 }
 
 .card h2{
-margin-bottom:8px;
+margin-top:12px;
+font-size:28px;
 }
 
 .role{
-color:#ffe082;
+font-size:22px;
 font-weight:bold;
-margin-bottom:12px;
 }
-</style>
-</head>
 
-<body>
-
-<h1>❤️ My Family ❤️</h1>
-
-<div class="container">
+.card p{
+margin-top:10px;
+font-size:17px;
   <div class="card">
 <img src="father.jpg">
 <h2>Sunil Udaywal</h2>
-<div class="role">Father 👨</div>
-<p>The pillar of our family. Hardworking, responsible and always supportive.</p>
+<div class="role">(Father)</div>
+<p>
+He is hardworking and responsible.<br>
+He always supports and motivates our family.
+</p>
 </div>
 
 <div class="card">
 <img src="mother.jpg">
 <h2>Anita Udaywal</h2>
-<div class="role">Mother 👩</div>
-<p>The heart of our home. Caring, loving and always brings happiness.</p>
+<div class="role">(Mother)</div>
+<p>
+She is caring and loving.<br>
+She always keeps our family happy and united.
+</p>
 </div>
 
-<div class="card">
+<div class="line1"></div>
+<div class="line2"></div>
+
+<div class="line3">
+<div></div>
+<div></div>
+</div>
+
+<div class="children">
+  <div class="card">
 <img src="tanvi.jpg">
 <h2>Tanvi Udaywal</h2>
-<div class="role">Daughter 👧</div>
-<p>A bright student with big dreams, confidence and kindness.</p>
+<div class="role">(Daughter)</div>
+<p>
+I am a B.Tech student.<br>
+I enjoy learning new things and working hard to achieve my goals.
+</p>
 </div>
 
 <div class="card">
 <img src="brother.jpg">
 <h2>Ritik Udaywal</h2>
-<div class="role">Brother 👦</div>
-<p>Cheerful, intelligent and the source of joy in our family.</p>
+<div class="role">(Brother)</div>
+<p>
+He is cheerful and intelligent.<br>
+He brings joy and happiness to our family.
+</p>
 </div>
 
 </div>
+  </div>
 
 </body>
 </html>
