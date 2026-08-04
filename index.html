@@ -1,60 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Family Tree</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Family Tree</title>
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 </head>
+
 <body>
 
-<div class="container">
+<div class="background"></div>
 
-<h1>🌳 MY FAMILY 🌳</h1>
+<h1 class="title">🌳 MY FAMILY 🌳</h1>
 
-<div class="parents">
+<div class="tree">
 
-<div class="card">
-<img src="father.jpg" alt="Father">
-<h2>Father</h2>
-<p>Sunil Udaywal</p>
+    <!-- Parents -->
+    <div class="row parents">
+
+        <div class="card father">
+
+            <div class="img-box">
+                <img src="images/father.jpg" alt="">
+            </div>
+
+            <h2>Father</h2>
+
+            <p>
+                He is hardworking and responsible.
+                He always supports and motivates
+                our family.
+            </p>
+
+        </div>
+
+        <div class="card mother">
+
+            <div class="img-box">
+                <img src="images/mother.jpg" alt="">
+            </div>
+
+            <h2>Mother</h2>
+
+            <p>
+                She is caring and loving.
+                She always keeps our family
+                happy and united.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="vertical-line"></div>
+
+    <div class="horizontal-line"></div>
+
+    <!-- Children -->
+
+    <div class="row children">
+
+        <div class="card me">
+
+            <div class="img-box">
+                <img src="images/me.jpg" alt="">
+            </div>
+
+            <h2>Me</h2>
+
+            <p>
+                I am a B.Tech student.
+                I enjoy learning new things
+                and working hard to achieve
+                my goals.
+            </p>
+
+        </div>
+
+        <div class="card brother">
+
+            <div class="img-box">
+                <img src="images/brother.jpg" alt="">
+            </div>
+
+            <h2>Brother</h2>
+
+            <p>
+                He is cheerful and intelligent.
+                He brings joy and happiness
+                to our family.
+            </p>
+
+        </div>
+
+    </div>
+
 </div>
 
-<div class="card">
-<img src="mother.jpg" alt="Mother">
-<h2>Mother</h2>
-<p>Anita Udaywal</p>
-</div>
-
-</div>
-
-<div class="tree-line">
-<div class="vertical"></div>
-<div class="horizontal"></div>
-<div class="split">
-<div></div>
-<div></div>
-</div>
-</div>
-
-<div class="children">
-  <div class="card">
-<img src="tanvi.jpg" alt="Tanvi">
-<h2>Tanvi</h2>
-<p>Daughter</p>
-</div>
-
-<div class="card">
-<img src="brother.jpg" alt="Brother">
-<h2>Ritik</h2>
-<p>Brother</p>
-</div>
-
-</div>
-
-</div>
+<script src="script.js"></script>
 
 </body>
 </html>
@@ -62,154 +113,355 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#f6f0e5;
+background:#f8f4ea;
+overflow-x:hidden;
+min-height:100vh;
 }
 
-.container{
-max-width:1100px;
-margin:auto;
-padding:30px;
+.background{
+position:fixed;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at top,#fff8e8,#f8f4ea 60%);
+z-index:-2;
 }
 
-h1{
+.title{
 text-align:center;
-font-size:52px;
+font-size:42px;
+font-weight:700;
+letter-spacing:3px;
+margin-top:35px;
 margin-bottom:50px;
-color:#2e5d34;
+color:#6b4226;
+text-shadow:2px 2px 8px rgba(0,0,0,.15);
+animation:fadeDown 1s ease;
 }
 
-.parents,
-.children{
-display:flex;
-justify-content:center;
-gap:100px;
-flex-wrap:wrap;
-}
-
-.card{
-width:220px;
-text-align:center;
-transition:.4s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-}
-
-.card img{
-width:180px;
-height:180px;
-object-fit:cover;
-border-radius:12px;
-border:5px solid #2e7d32;
-box-shadow:0 10px 20px rgba(0,0,0,.25);
-}
-
-.card h2{
-margin-top:12px;
-font-size:28px;
-color:#222;
-}
-
-.card p{
-font-size:18px;
-color:#555;
-margin-top:5px;
-
-}
-.tree-line{
+.tree{
+width:100%;
 display:flex;
 flex-direction:column;
 align-items:center;
-margin:30px 0;
+position:relative;
+padding-bottom:80px;
 }
 
-.vertical{
-width:4px;
-height:60px;
-background:#2e7d32;
-}
-
-.horizontal{
-width:420px;
-height:4px;
-background:#2e7d32;
-}
-
-.split{
-width:420px;
+.row{
 display:flex;
-justify-content:space-between;
-}
-
-.split div{
-width:4px;
-height:60px;
-background:#2e7d32;
-}
-
-@media(max-width:768px){
-
-.parents,
-.children{
-gap:35px;
-}
-
-.horizontal,
-.split{
-width:220px;
+justify-content:center;
+gap:140px;
+flex-wrap:wrap;
+width:100%;
 }
 
 .card{
-width:170px;
-}
-
-.card img{
-width:140px;
-height:140px;
-}
-
-h1{
-font-size:38px;
-}
-
-}
-.card{
-background:white;
+width:240px;
 padding:20px;
-border-radius:18px;
-box-shadow:0 12px 25px rgba(0,0,0,.15);
+border-radius:22px;
+background:rgba(255,255,255,.45);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.4);
+box-shadow:
+0 15px 35px rgba(0,0,0,.12);
+transition:.45s;
+text-align:center;
+position:relative;
+cursor:pointer;
+animation:zoomIn .9s ease;
 }
 
 .card:hover{
-transform:translateY(-10px) scale(1.05);
-box-shadow:0 18px 35px rgba(0,0,0,.25);
+transform:translateY(-12px) scale(1.05);
+box-shadow:
+0 25px 55px rgba(0,0,0,.18);
 }
 
-body{
-background:linear-gradient(135deg,#eef7ea,#d7efd0);
+.img-box{
+width:160px;
+height:160px;
+margin:auto;
+border-radius:12px;
+overflow:hidden;
+border:6px solid white;
+box-shadow:0 8px 
+/* ===== Tree Lines ===== */
+
+.vertical-line{
+width:4px;
+height:80px;
+background:#8b5e3c;
+margin:20px 0 0;
+position:relative;
+border-radius:10px;
+box-shadow:0 0 12px rgba(139,94,60,.4);
 }
 
-h1{
-text-shadow:2px 2px 8px rgba(0,0,0,.15);
+.horizontal-line{
+width:420px;
+height:4px;
+background:#8b5e3c;
+margin-bottom:40px;
+border-radius:10px;
+box-shadow:0 0 12px rgba(139,94,60,.4);
+position:relative;
 }
 
-.card img{
-transition:0.4s;
+.horizontal-line::before,
+.horizontal-line::after{
+content:"";
+position:absolute;
+width:4px;
+height:45px;
+background:#8b5e3c;
+top:0;
+border-radius:10px;
 }
 
-.card:hover img{
-transform:scale(1.05);
+.horizontal-line::before{
+left:0;
+}
+
+.horizontal-line::after{
+right:0;
+}
+
+/* ===== Animations ===== */
+
+@keyframes fadeDown{
+0%{
+opacity:0;
+transform:translateY(-40px);
+}
+100%{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes zoomIn{
+0%{
+opacity:0;
+transform:scale(.7);
+}
+100%{
+opacity:1;
+transform:scale(1);
+}
+}
+
+@keyframes float{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-8px);
+}
+}
+
+.card{
+animation:zoomIn .8s ease, float 5s ease-in-out infinite;
+}
+/* ========= Decorative Effects ========= */
+
+.card::before{
+content:"";
+position:absolute;
+top:-2px;
+left:-2px;
+right:-2px;
+bottom:-2px;
+border-radius:24px;
+background:linear-gradient(
+45deg,
+#d4af37,
+#ffffff,
+#c49b66,
+#ffffff,
+#d4af37
+);
+background-size:300% 300%;
+z-index:-1;
+opacity:0;
+transition:.5s;
+animation:borderGlow 6s linear infinite;
+}
+
+.card:hover::before{
+opacity:1;
+}
+
+@keyframes borderGlow{
+0%{
+background-position:0% 50%;
+}
+50%{
+background-position:100% 50%;
+}
+100%{
+background-position:0% 50%;
+}
+}
+
+.img-box{
+transition:.4s;
+}
+
+.card:hover .img-box{
+transform:rotate(-2deg) scale(1.05);
+}
+
+.title::after{
+content:"";
+display:block;
+width:180px;
+height:4px;
+margin:12px auto 0;
+border-radius:20px;
+background:linear-gradient(to right,#c49b66,#8b5e3c,#c49b66);
+}
+
+.parents{
+margin-bottom:10px;
+}
+
+.children{
+margin-top:0;
 }
 
 .card p{
-line-height:1.6;
+text-align:center;
+padding:0 6px;
+}
+/* ========= Responsive ========= */
+
+@media (max-width:900px){
+
+.title{
+font-size:32px;
+margin-bottom:35px;
 }
 
-.container{
-padding-bottom:60px;
+.row{
+gap:40px;
+flex-direction:column;
+align-items:center;
 }
+
+.horizontal-line,
+.vertical-line{
+display:none;
+}
+
+.card{
+width:92%;
+max-width:320px;
+}
+
+.img-box{
+width:150px;
+height:150px;
+}
+
+}
+
+@media (max-width:500px){
+
+.title{
+font-size:26px;
+letter-spacing:1px;
+}
+
+.card{
+padding:18px;
+}
+
+.card h2{
+font-size:22px;
+}
+
+.card p{
+font-size:14px;
+line-height:1.7;
+}
+
+.img-box{
+width:130px;
+height:130px;
+}
+
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-track{
+background:#f5f1e8;
+}
+
+::-webkit-scrollbar-thumb{
+background:#b98b5c;
+border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+background:#8b5e3c;
+}
+// ===== Premium Family Tree Animation =====
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach((card, index) => {
+
+        card.style.opacity = "0";
+        card.style.transform = "translateY(50px)";
+
+        setTimeout(() => {
+            card.style.transition = "all .8s ease";
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0)";
+        }, index * 250);
+
+        card.addEventListener("mouseenter", () => {
+            card.style.boxShadow =
+                "0 25px 60px rgba(0,0,0,.25)";
+        });
+
+        card.addEventListener("mouseleave", () => {
+            card.style.boxShadow =
+                "0 15px 35px rgba(0,0,0,.12)";
+        });
+
+    });
+
+});
+
+// Mouse Glow Effect
+
+document.addEventListener("mousemove", (e) => {
+
+    const x = e.clientX;
+    const y = e.clientY;
+
+    document.body.style.background =
+    `radial-gradient(circle at ${x}px ${y}px,
+    rgba(255,255,255,.45),
+    #f8f4ea 45%)`;
+
+});
+
+// Smooth Title Animation
+
+const title = document.querySelector(".title");
+
+let scale
