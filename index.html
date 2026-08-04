@@ -6,28 +6,32 @@
 <title>My Family</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
 body{
-background:#f4efe3;
-font-family:Georgia,serif;
+background:#f8f2e8;
+padding:30px;
 }
 
 h1{
 text-align:center;
-font-size:56px;
-margin:30px 0;
-letter-spacing:2px;
+font-size:55px;
+color:#2f4f2f;
+margin-bottom:40px;
 }
 
 .tree{
 display:flex;
 flex-direction:column;
 align-items:center;
+max-width:1000px;
+margin:auto;
 }
 
 .row{
@@ -45,166 +49,109 @@ text-align:center;
 .card img{
 width:170px;
 height:170px;
+border-radius:50%;
 object-fit:cover;
-border-radius:10px;
-border:4px solid #222;
+border:5px solid #3f7d20;
+box-shadow:0 8px 18px rgba(0,0,0,.2);
 }
 
 .card h2{
-margin-top:10px;
-font-size:26px;
+margin-top:15px;
+font-size:28px;
+color:#222;
 }
 
 .card p{
-font-size:16px;
-margin-top:8px;
-line-height:1.5;
+font-size:18px;
+margin-top:6px;
 }
 
 .vline{
 width:4px;
 height:70px;
-background:#222;
+background:#3f7d20;
 }
 
 .hline{
 width:420px;
 height:4px;
-background:#222;
+background:#3f7d20;
 }
 
-.twolines{
+.split{
 width:420px;
 display:flex;
 justify-content:space-between;
 }
 
-.twolines div{
+.split div{
 width:4px;
 height:70px;
-background:#222;
+background:#3f7d20;
 }
 
 @media(max-width:700px){
+
 .row{
 gap:40px;
 }
-.hline,.twolines{
-width:240px;
-}
-}
-</style>
-</head>
 
-<body>
-
-<h1>MY FAMILY</h1>
-
-<div class="tree">
-
-<div class="row">
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Family</title>
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-background:#f4efe3;
-font-family:Georgia,serif;
-}
-
-h1{
-text-align:center;
-font-size:56px;
-margin:30px 0;
-letter-spacing:2px;
-}
-
-.tree{
-display:flex;
-flex-direction:column;
-align-items:center;
-}
-
-.row{
-display:flex;
-justify-content:center;
-gap:120px;
-flex-wrap:wrap;
-}
-
-.card{
+.hline,.split{
 width:220px;
-text-align:center;
 }
 
-.card img{
-width:170px;
-height:170px;
-object-fit:cover;
-border-radius:10px;
-border:4px solid #222;
 }
 
-.card h2{
-margin-top:10px;
-font-size:26px;
-}
-
-.card p{
-font-size:16px;
-margin-top:8px;
-line-height:1.5;
-}
-
-.vline{
-width:4px;
-height:70px;
-background:#222;
-}
-
-.hline{
-width:420px;
-height:4px;
-background:#222;
-}
-
-.twolines{
-width:420px;
-display:flex;
-justify-content:space-between;
-}
-
-.twolines div{
-width:4px;
-height:70px;
-background:#222;
-}
-
-@media(max-width:700px){
-.row{
-gap:40px;
-}
-.hline,.twolines{
-width:240px;
-}
-}
 </style>
+
 </head>
 
 <body>
 
-<h1>MY FAMILY</h1>
+<h1>🌳 MY FAMILY 🌳</h1>
 
 <div class="tree">
 
 <div class="row">
+  <div class="card">
+<img src="father.jpg" alt="Father">
+<h2>Father</h2>
+<p>Sunil Udaywal</p>
+</div>
+
+<div class="card">
+<img src="mother.jpg" alt="Mother">
+<h2>Mother</h2>
+<p>Anita Udaywal</p>
+</div>
+
+</div>
+
+<div class="vline"></div>
+
+<div class="hline"></div>
+
+<div class="split">
+<div></div>
+<div></div>
+</div>
+
+<div class="row">
+
+<div class="card">
+<img src="tanvi.jpg" alt="Tanvi">
+<h2>Tanvi</h2>
+<p>Daughter</p>
+</div>
+
+<div class="card">
+<img src="brother.jpg" alt="Brother">
+<h2>Ritik</h2>
+<p>Brother</p>
+</div>
+
+</div>
+
+</div>
+</body>
+</html>
